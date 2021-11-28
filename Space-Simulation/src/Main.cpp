@@ -6,16 +6,16 @@
 #include <string>
 #include <deque>
 #include <SDL.h>
-//#include <SDL/SDL_draw.h>
 #include <SDL_image.h>
 #include <stdio.h>
 
-#include "InputHandler.hpp"
-#include "MainController.hpp"
+//#include "InputHandler.hpp"
+
+#include "Controllers/MainController.hpp"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 1200;
-const int SCREEN_HEIGHT = 1200;
+const int SCREEN_WIDTH = 1080;
+const int SCREEN_HEIGHT = 1080;
 
 int main(int argc, char* args[])
 {
@@ -117,8 +117,8 @@ int main(int argc, char* args[])
 	}
 
 	//Destroy window
-   // SDL_DestroyRenderer(gRenderer);
-   //SDL_DestroyWindow(window);
+	//SDL_DestroyRenderer(gRenderer);
+	//SDL_DestroyWindow(window);
 
 	//Quit SDL subsystems
 	//SDL_Quit();

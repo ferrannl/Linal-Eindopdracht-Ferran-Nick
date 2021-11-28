@@ -262,8 +262,3 @@ Vector* Object::get_max()
 	}
 	return v;
 }
-
-
-
-
-

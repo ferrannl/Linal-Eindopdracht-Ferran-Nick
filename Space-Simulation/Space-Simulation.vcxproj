@@ -157,15 +157,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Objects\Barrel.cpp" />
+    <ClCompile Include="src\Objects\Bullet.cpp" />
+    <ClCompile Include="src\Matrixes\Outproduct.cpp" />
+    <ClCompile Include="src\Objects\Square.cpp" />
+    <ClCompile Include="src\Matrixes\Inproduct.cpp" />
+    <ClCompile Include="src\Matrixes\Line.cpp" />
+    <ClCompile Include="src\Matrixes\Matrix.cpp" />
+    <ClCompile Include="src\Objects\Ship.cpp" />
     <ClCompile Include="src\Controllers\MainController.cpp" />
     <ClCompile Include="src\Objects\Object.cpp" />
     <ClCompile Include="src\Handlers\InputHandler.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Matrixes\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Objects\Barrel.hpp" />
+    <ClInclude Include="src\Objects\Bullet.hpp" />
+    <ClInclude Include="src\Matrixes\Outproduct.hpp" />
+    <ClInclude Include="src\Objects\Square.hpp" />
+    <ClInclude Include="src\Matrixes\Inproduct.hpp" />
+    <ClInclude Include="src\Matrixes\Line.hpp" />
+    <ClInclude Include="src\Matrixes\Matrix.hpp" />
+    <ClInclude Include="src\Objects\Ship.hpp" />
     <ClInclude Include="src\Controllers\MainController.hpp" />
     <ClInclude Include="src\Objects\Object.hpp" />
     <ClInclude Include="src\Handlers\InputHandler.hpp" />
+    <ClInclude Include="src\Matrixes\Vector.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
