@@ -136,6 +136,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -154,9 +155,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)External Libraries\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Simulation\Camera.cpp" />
     <ClCompile Include="src\Objects\Barrel.cpp" />
     <ClCompile Include="src\Objects\Bullet.cpp" />
     <ClCompile Include="src\Matrixes\Outproduct.cpp" />
@@ -170,8 +173,10 @@
     <ClCompile Include="src\Handlers\InputHandler.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Matrixes\Vector.cpp" />
+    <ClCompile Include="src\Simulation\World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Simulation\Camera.hpp" />
     <ClInclude Include="src\Objects\Barrel.hpp" />
     <ClInclude Include="src\Objects\Bullet.hpp" />
     <ClInclude Include="src\Matrixes\Outproduct.hpp" />
@@ -184,6 +189,7 @@
     <ClInclude Include="src\Objects\Object.hpp" />
     <ClInclude Include="src\Handlers\InputHandler.hpp" />
     <ClInclude Include="src\Matrixes\Vector.hpp" />
+    <ClInclude Include="src\Simulation\World.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

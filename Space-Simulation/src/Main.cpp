@@ -6,10 +6,9 @@
 #include <string>
 #include <deque>
 #include <SDL.h>
-#include <SDL_image.h>
 #include <stdio.h>
 
-//#include "InputHandler.hpp"
+#include "Handlers/InputHandler.hpp"
 
 #include "Controllers/MainController.hpp"
 
@@ -48,26 +47,6 @@ int main(int argc, char* args[])
 		else
 		{
 			MainController m{};
-
-			/*for (auto o : w.objects) {
-				o.transform(o.rotation_matrix_neg_y);
-				o.transform(o.rotation_matrix_neg_y);
-				o.transform(o.rotation_matrix_neg_y);
-				o.transform(o.rotation_matrix_neg_y);
-				o.transform(o.rotation_matrix_neg_y);
-				o.transform(o.rotation_matrix_neg_y);
-
-				o.transform(o.rotation_matrix_pos_x);
-				o.transform(o.rotation_matrix_pos_x);
-				o.transform(o.rotation_matrix_pos_x);
-				o.transform(o.rotation_matrix_pos_x);
-				o.transform(o.rotation_matrix_pos_x);
-				o.transform(o.rotation_matrix_pos_x);
-			}*/
-
-			//SDL_MessageBoxData* mes = new SDL_MessageBoxData(SDL_MESSAGEBOX_INFORMATION, "Title" , "Text", window);
-
-
 
 			SDL_Event event;
 			while (true) {
@@ -115,13 +94,5 @@ int main(int argc, char* args[])
 			}
 		}
 	}
-
-	//Destroy window
-	//SDL_DestroyRenderer(gRenderer);
-	//SDL_DestroyWindow(window);
-
-	//Quit SDL subsystems
-	//SDL_Quit();
-
 	return 0;
 }

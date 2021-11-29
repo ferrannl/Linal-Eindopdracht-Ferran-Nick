@@ -1,6 +1,6 @@
-#include "Object.h"
-#include "Inproduct.hpp"
-#include "Outproduct.hpp"
+#include "../Objects/Object.hpp"
+#include "../Matrixes/Inproduct.hpp"
+#include "../Matrixes/Outproduct.hpp"
 
 Matrix* Object::translation_matrix_heading_pos()
 {

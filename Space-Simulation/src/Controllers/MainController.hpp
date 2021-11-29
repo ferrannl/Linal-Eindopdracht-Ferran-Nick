@@ -1,6 +1,6 @@
 #pragma once
-#include "World.hpp"
-#include "Camera.hpp"
+#include "../Simulation/World.hpp"
+#include "../Simulation/Camera.hpp"
 #include <SDL.h>
 
 class MainController {

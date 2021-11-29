@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "Line.h"
-#include "Matrix.h"
+#include "../Matrixes/Line.hpp"
+#include "../Matrixes/Matrix.hpp"
 #include <sstream>
 class Object {
 
