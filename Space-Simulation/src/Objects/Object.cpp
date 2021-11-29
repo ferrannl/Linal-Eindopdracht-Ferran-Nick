@@ -6,10 +6,10 @@ Matrix* Object::translation_matrix_heading_pos()
 {
 	Matrix* m = new Matrix(4, 4);
 
-	Vector* tussenstap = new Vector(back->x, back->y, back->z);
-	tussenstap->sub(*front);
+	Vector* intermediate_step = new Vector(back->x, back->y, back->z);
+	intermediate_step->sub(*front);
 
-	m = m->get_translation_matrix(tussenstap->x, tussenstap->y, tussenstap->z);
+	m = m->get_translation_matrix(intermediate_step->x, intermediate_step->y, intermediate_step->z);
 	return m;
 }
 
@@ -37,7 +37,7 @@ Vector* Object::get_local_z_axis()
 	return vector;
 }
 
-Vector* Object::get_centrum()
+Vector* Object::get_center()
 {
 	double x_total = 0;
 	double y_total = 0;
@@ -74,7 +74,6 @@ Vector* Object::get_gun_heading()
 
 Vector* Object::gun_location()
 {
-	//Only works for gunship atm
 	double x_total = 0;
 	double y_total = 0;
 	double z_total = 0;
@@ -97,7 +96,6 @@ Object::Object() {
 	vectors = {};
 	sub_objects = {};
 	growing = true;
-	//Matrix zooi?
 	translation_matrix_pos_x = new Matrix(4, 4);
 	translation_matrix_pos_y = new Matrix(4, 4);
 	translation_matrix_neg_x = new Matrix(4, 4);

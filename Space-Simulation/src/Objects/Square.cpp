@@ -12,11 +12,6 @@ Square::Square(int x, int y, int z)
 	vectors.push_back(new Vector(x + -10, y + -10, z + -70));
 	vectors.push_back(new Vector(x + -10, y + -10, z + -50));
 
-
-	//vectors.push_back(new Vector(x + 150 + 1 , y + 40, z + 100));
-	//vectors.push_back(new Vector(x + 150 , y + 40 + 1, z + 100));
-	//double l = Inproduct::in_product(*vectors.at(8), *vectors.at(9));
-	//Vector l = Outproduct::out_product(*vectors.at(8), *vectors.at(9));
 	//bovenste lijntjes
 	lines.push_back(new Line(vectors.at(0), vectors.at(1)));
 	lines.push_back(new Line(vectors.at(1), vectors.at(2)));
@@ -39,10 +34,12 @@ Square::Square(int x, int y, int z)
 
 void Square::act()
 {
+	// vergoot tien keer
 	if (counter_should_act == 10) {
 		counter_should_act = 0;
 		if (growing) {
-			Vector* centrum = get_centrum();
+			// vergoting en verkleining moet vanuit het middelpunt, daarom centrum variabele
+			Vector* centrum = get_center();
 			Matrix* m = new Matrix(4, 4);
 
 			transform(m->get_translation_matrix(-centrum->x, -centrum->y, -centrum->z));
@@ -57,8 +54,10 @@ void Square::act()
 			delete centrum;
 			delete m;
 		}
+
+		// verklein tien keer
 		else {
-			Vector* centrum = get_centrum();
+			Vector* centrum = get_center();
 			Matrix* m = new Matrix(4, 4);
 
 			transform(m->get_translation_matrix(-centrum->x, -centrum->y, -centrum->z));

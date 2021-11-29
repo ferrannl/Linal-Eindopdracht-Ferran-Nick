@@ -46,7 +46,7 @@ void Barrel::act()
 {
 	Vector* vector = get_local_x_axis();
 	vector->normalize();
-	Vector* centrum1 = get_centrum();
+	Vector* centrum1 = get_center();
 
 	Matrix* matrix = calculate_matrix(vector, centrum1, 1.0);
 	transform(matrix);

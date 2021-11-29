@@ -120,8 +120,6 @@ Ship::Ship(int x, int y, int z)
 	//linksonder
 	vectors.push_back(new Vector(x + 12, y + -8, z + -230));
 
-
-
 	back = new Vector(x + 0, y + 0, z + -100);
 	front = new Vector(x + 0, y + 0, z + -110);
 	camera = new Vector(x + 0, y + 50, z + -250);

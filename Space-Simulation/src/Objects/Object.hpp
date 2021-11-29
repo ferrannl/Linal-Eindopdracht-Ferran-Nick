@@ -29,7 +29,7 @@ public:
 	Vector* get_local_x_axis();
 	Vector* get_local_y_axis();
 	Vector* get_local_z_axis();
-	Vector* get_centrum();
+	Vector* get_center();
 
 	Vector* front;
 	Vector* back;
@@ -54,12 +54,6 @@ public:
 
 	void transform(Matrix* matrix);
 
-	//void create_ship(int x, int y , int z);
-
-	//void create_bullet(int x, int y, int z, Object controlled_object);
-
-	//void create_square(int x, int y, int z);
-
 	virtual void act() = 0;
 
 	Matrix* calculate_matrix(Vector* rotation, Vector* centrum, double degrees);
@@ -69,5 +63,5 @@ public:
 	Vector* get_min();
 	Vector* get_max();
 
-	std::vector<Object*> sub_objects;//subjects ;p
+	std::vector<Object*> sub_objects;
 };

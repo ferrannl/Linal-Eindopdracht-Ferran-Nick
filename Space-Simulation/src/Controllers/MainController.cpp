@@ -59,7 +59,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector3 = world->controlled_object->get_local_y_axis();
 		vector3->normalize();
-		Vector* centrum3 = world->controlled_object->get_centrum();
+		Vector* centrum3 = world->controlled_object->get_center();
 
 		Matrix* matrix3 = world->controlled_object->calculate_matrix(vector3, centrum3, 5.0);
 		world->controlled_object->transform(matrix3);
@@ -69,7 +69,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector4 = world->controlled_object->get_local_y_axis();
 		vector4->normalize();
-		Vector* centrum4 = world->controlled_object->get_centrum();
+		Vector* centrum4 = world->controlled_object->get_center();
 
 		Matrix* matrix4 = world->controlled_object->calculate_matrix(vector4, centrum4, -5.0);
 		world->controlled_object->transform(matrix4);
@@ -80,7 +80,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector = world->controlled_object->get_local_x_axis();
 		vector->normalize();
-		Vector* centrum1 = world->controlled_object->get_centrum();
+		Vector* centrum1 = world->controlled_object->get_center();
 
 		Matrix* matrix = world->controlled_object->calculate_matrix(vector, centrum1, 5.0);
 		world->controlled_object->transform(matrix);
@@ -90,7 +90,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector2 = world->controlled_object->get_local_x_axis();
 		vector2->normalize();
-		Vector* centrum2 = world->controlled_object->get_centrum();
+		Vector* centrum2 = world->controlled_object->get_center();
 
 		Matrix* matrix2 = world->controlled_object->calculate_matrix(vector2, centrum2, -5.0);
 		world->controlled_object->transform(matrix2);
@@ -101,7 +101,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector5 = world->controlled_object->get_local_z_axis();
 		vector5->normalize();
-		Vector* centrum5 = world->controlled_object->get_centrum();
+		Vector* centrum5 = world->controlled_object->get_center();
 
 		Matrix* matrix5 = world->controlled_object->calculate_matrix(vector5, centrum5, 5.0);
 		world->controlled_object->transform(matrix5);
@@ -111,7 +111,7 @@ void MainController::input(SDL_Event event)
 	{
 		Vector* vector6 = world->controlled_object->get_local_z_axis();
 		vector6->normalize();
-		Vector* centrum6 = world->controlled_object->get_centrum();
+		Vector* centrum6 = world->controlled_object->get_center();
 
 		Matrix* matrix6 = world->controlled_object->calculate_matrix(vector6, centrum6, -5.0);
 		world->controlled_object->transform(matrix6);

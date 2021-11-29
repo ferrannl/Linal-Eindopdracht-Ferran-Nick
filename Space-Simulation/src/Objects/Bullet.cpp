@@ -66,7 +66,7 @@ Bullet::Bullet(int x, int y, int z, Object* controlled_object)
 	}*/
 
 	//draaien op basis van heading mmmmm
-	Vector* centrum = get_centrum();
+	Vector* centrum = get_center();
 	Matrix* m = new Matrix(4, 4);
 
 	transform(m->get_translation_matrix(-centrum->x, -centrum->y, -centrum->z));
