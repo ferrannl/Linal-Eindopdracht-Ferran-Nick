@@ -6,4 +6,6 @@ https://github.com/ferrannl/Linal-Eindopdracht-Ferran-Nick/blob/main/LINAL_Asses
 Beoordeling:
 https://github.com/ferrannl/Linal-Eindopdracht-Ferran-Nick/blob/main/Beoordeling%20LINAL%20Assessment%202020-11-13.pdf
 
+Made using C++ and SDL.
+
 Ferran Hendriks
