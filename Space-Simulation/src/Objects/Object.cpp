@@ -43,7 +43,7 @@ Vector* Object::get_center()
 	double y_total = 0;
 	double z_total = 0;
 
-	for (int i = 0; i < vectors.size(); i++) {
+	for (int i = 0; i < vectors.size(); ++i) {
 		x_total += vectors.at(i)->x;
 		y_total += vectors.at(i)->y;
 		z_total += vectors.at(i)->z;
@@ -78,7 +78,7 @@ Vector* Object::gun_location()
 	double y_total = 0;
 	double z_total = 0;
 
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; ++i) {
 		x_total += sub_objects.at(0)->vectors.at(i)->x;
 		y_total += sub_objects.at(0)->vectors.at(i)->y;
 		z_total += sub_objects.at(0)->vectors.at(i)->z;
@@ -126,7 +126,7 @@ Object::Object() {
 
 void Object::transform(Matrix* matrix)
 {
-	for (int i = 0; i < vectors.size(); i++) {
+	for (int i = 0; i < vectors.size(); ++i) {
 		double x = matrix->matrix_array[0][0] * vectors.at(i)->x + matrix->matrix_array[0][1] * vectors.at(i)->y + matrix->matrix_array[0][2] * vectors.at(i)->z + matrix->matrix_array[0][3] * vectors.at(i)->w;
 		double y = matrix->matrix_array[1][0] * vectors.at(i)->x + matrix->matrix_array[1][1] * vectors.at(i)->y + matrix->matrix_array[1][2] * vectors.at(i)->z + matrix->matrix_array[1][3] * vectors.at(i)->w;
 		double z = matrix->matrix_array[2][0] * vectors.at(i)->x + matrix->matrix_array[2][1] * vectors.at(i)->y + matrix->matrix_array[2][2] * vectors.at(i)->z + matrix->matrix_array[2][3] * vectors.at(i)->w;

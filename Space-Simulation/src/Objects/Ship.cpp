@@ -176,7 +176,7 @@ Ship::Ship(int x, int y, int z)
 
 	//thrust
 	int start = 16;
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; ++i) {
 		lines.push_back(new Line(vectors.at(16 + i * 8), vectors.at(17 + i * 8)));
 		lines.push_back(new Line(vectors.at(17 + i * 8), vectors.at(19 + i * 8)));
 		lines.push_back(new Line(vectors.at(19 + i * 8), vectors.at(18 + i * 8)));

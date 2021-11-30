@@ -7,8 +7,6 @@ Bullet::Bullet(int x, int y, int z, Object* controlled_object)
 	heading = controlled_object->translation_matrix_heading_pos();
 	v_heading = controlled_object->get_gun_heading();
 
-	//Vector* _front = controlled_object->front;
-	//Vector* _back = controlled_object->back;
 	std::vector<Vector*> v = controlled_object->sub_objects.at(0)->vectors;
 
 	Vector* _front = new Vector(x, y, z);
@@ -24,18 +22,6 @@ Bullet::Bullet(int x, int y, int z, Object* controlled_object)
 	vectors.push_back(new Vector(v.at(5)->x, v.at(5)->y, v.at(5)->z));
 	vectors.push_back(new Vector(v.at(6)->x, v.at(6)->y, v.at(6)->z));
 	vectors.push_back(new Vector(v.at(7)->x, v.at(7)->y, v.at(7)->z));
-
-	////front
-	//vectors.push_back(new Vector(_front->x + 5, _front->y + 5, _front->z + 0));
-	//vectors.push_back(new Vector(_front->x + 5, _front->y - 5, _front->z + 0));
-	//vectors.push_back(new Vector(_front->x - 5, _front->y + 5, _front->z + 0));
-	//vectors.push_back(new Vector(_front->x - 5, _front->y - 5, _front->z + 0));
-	////back
-	//vectors.push_back(new Vector(_back->x + 5, _back->y + 5, _back->z - 10));
-	//vectors.push_back(new Vector(_back->x + 5, _back->y - 5, _back->z - 10));
-	//vectors.push_back(new Vector(_back->x - 5, _back->y + 5, _back->z - 10));
-	//vectors.push_back(new Vector(_back->x - 5, _back->y - 5, _back->z - 10));
-
 
 	delete _front;
 	delete _back;
@@ -59,13 +45,7 @@ Bullet::Bullet(int x, int y, int z, Object* controlled_object)
 	back = vectors.at(1);
 	front = vectors.at(0);
 
-	/*for (auto v : vectors) {
-		double deg = Inproduct::in_product(*v, *v_heading);
-		Matrix* m = new Matrix(4, 4);
-		m.get
-	}*/
-
-	//draaien op basis van heading mmmmm
+	//draaien op basis van heading m
 	Vector* centrum = get_center();
 	Matrix* m = new Matrix(4, 4);
 

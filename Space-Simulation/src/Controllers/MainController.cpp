@@ -149,7 +149,7 @@ void MainController::draw(SDL_Renderer* gRenderer)
 
 	SDL_SetRenderDrawColor(gRenderer, 255, 0, 0, 255);
 	for (auto o : world->objects) {
-		for (int i = 0; i < o->lines.size(); i++) {
+		for (int i = 0; i < o->lines.size(); ++i) {
 			Vector* begin = o->lines[i]->begin->transformed_copy(m);
 			Vector* end = o->lines[i]->end->transformed_copy(m);
 

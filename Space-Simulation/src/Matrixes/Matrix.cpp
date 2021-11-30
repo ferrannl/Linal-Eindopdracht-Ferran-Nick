@@ -11,7 +11,7 @@ Matrix::Matrix(int rows, int cols)
 
 }
 void Matrix::fill_array(double number) {
-	for (int i = 0; i < rows; i++) {
+	for (int i = 0; i < rows; ++i) {
 		for (int j = 0; j < cols; j++) {
 			matrix_array[i][j] = number;
 		}
@@ -21,7 +21,7 @@ void Matrix::fill_array(double number) {
 Matrix* Matrix::add(Matrix* matrix1)
 {
 	Matrix* return_matrix = new Matrix(rows, cols);
-	for (int i = 0; i < rows; i++)
+	for (int i = 0; i < rows; ++i)
 	{
 		for (int j = 0; j < cols; j++)
 		{
@@ -34,7 +34,7 @@ Matrix* Matrix::add(Matrix* matrix1)
 Matrix* Matrix::sub(Matrix* matrix1)
 {
 	Matrix* return_matrix = new Matrix(rows, cols);
-	for (int i = 0; i < rows; i++)
+	for (int i = 0; i < rows; ++i)
 	{
 		for (int j = 0; j < cols; j++)
 		{
@@ -46,7 +46,7 @@ Matrix* Matrix::sub(Matrix* matrix1)
 
 Matrix* Matrix::mul_scalair(double scalair) {
 	Matrix* return_matrix = new Matrix(rows, cols);
-	for (int i = 0; i < rows; i++) {
+	for (int i = 0; i < rows; ++i) {
 		for (int j = 0; j < cols; j++) {
 			return_matrix->matrix_array[i][j] = scalair * matrix_array[i][j];
 		}
@@ -184,7 +184,7 @@ Matrix* Matrix::multiply(Matrix* l, Matrix* r)
 {
 	Matrix* m = new Matrix(4, 4);
 
-	for (int i = 0; i < 4; i++) {
+	for (int i = 0; i < 4; ++i) {
 		for (int j = 0; j < 4; j++) {
 			m->matrix_array[i][j] =
 				l->matrix_array[i][0] * r->matrix_array[0][j] +
