@@ -1,6 +1,7 @@
 #include "../Matrixes/Matrix.hpp"
 #include <iostream>
 #include <math.h>
+#define N 4
 #define M_PI 3.14159265
 
 Matrix::Matrix(int rows, int cols)
@@ -10,6 +11,22 @@ Matrix::Matrix(int rows, int cols)
 	fill_array(0);
 
 }
+
+
+using namespace std;
+
+// This function returns 1 if A[][] and B[][] are identical
+// otherwise returns 0
+bool Matrix::compare(Matrix* matrix)
+{
+	int i, j;
+	for (i = 0; i < N; i++)
+		for (j = 0; j < N; j++)
+			if (matrix_array[i][j] != matrix->matrix_array[i][j])
+				return 0;
+	return 1;
+}
+
 void Matrix::fill_array(double number) {
 	for (int i = 0; i < rows; ++i) {
 		for (int j = 0; j < cols; j++) {

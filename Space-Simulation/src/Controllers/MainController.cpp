@@ -9,6 +9,7 @@ MainController::MainController()
 void MainController::input(SDL_Event event)
 {
 	switch (event.key.keysym.sym) {
+		//toggle first person
 	case SDLK_c:
 		if (camera->thirdperson) {
 			camera->thirdperson = false;
@@ -18,6 +19,7 @@ void MainController::input(SDL_Event event)
 			camera->tracked_object = world->controlled_object;
 		}
 		break;
+
 	case SDLK_PAGEUP:
 		camera->eye->z -= 10;
 		camera->look_at->z -= 10;

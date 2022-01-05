@@ -25,7 +25,7 @@ namespace UnitTest
 
 			m1->fill_array(0);
 
-			Assert::AreEqual(m1, ma);
+			Assert::IsTrue(m1->compare(ma));
 		}
 
 		TEST_METHOD(Add)
@@ -37,8 +37,7 @@ namespace UnitTest
 			m1->fill_array(1);
 			m2->fill_array(2);
 			ma->fill_array(3);
-
-			Assert::AreEqual(ma, m1->add(m2));
+			Assert::IsTrue(ma->compare(m1->add(m2)));
 		}
 
 		TEST_METHOD(Sub)
@@ -53,7 +52,7 @@ namespace UnitTest
 			ma->fill_array(1);
 			mb = m1->sub(m2);
 
-			Assert::AreEqual(ma, mb);
+			Assert::IsTrue(ma->compare(mb));
 		}
 
 		TEST_METHOD(Mul_scalair)
@@ -66,7 +65,7 @@ namespace UnitTest
 			m2 = m1->mul_scalair(2);
 			ma->fill_array(4);
 
-			Assert::AreEqual(m2, ma);
+			Assert::IsTrue(m2->compare(ma));
 		}
 
 		TEST_METHOD(Get_scaling_matrix)
@@ -83,7 +82,7 @@ namespace UnitTest
 			m3->matrix_array[2][0] = 0.0; m3->matrix_array[2][1] = 0.0; m3->matrix_array[2][2] = 1.0; m3->matrix_array[2][3] = 0.0;
 			m3->matrix_array[3][0] = 0.0; m3->matrix_array[3][1] = 0.0; m3->matrix_array[3][2] = 0.0; m3->matrix_array[3][3] = 1.0;
 
-			Assert::AreEqual(m2, m3);
+			Assert::IsTrue(m2->compare(m3));
 		}
 
 		TEST_METHOD(Get_translation_matrix)
@@ -100,7 +99,7 @@ namespace UnitTest
 			m3->matrix_array[2][0] = 0.0; m3->matrix_array[2][1] = 0.0; m3->matrix_array[2][2] = 1.0; m3->matrix_array[2][3] = 1.0;
 			m3->matrix_array[3][0] = 0.0; m3->matrix_array[3][1] = 0.0; m3->matrix_array[3][2] = 0.0; m3->matrix_array[3][3] = 1.0;
 
-			Assert::AreEqual(m2, m3);
+			Assert::IsTrue(m2->compare(m3));
 		}
 
 		TEST_METHOD(Get_rotation_matrix_x)
@@ -118,7 +117,7 @@ namespace UnitTest
 			ma->matrix_array[2][0] = 0.0; ma->matrix_array[2][1] = sin(a); ma->matrix_array[2][2] = cos(a); ma->matrix_array[2][3] = 0.0;
 			ma->matrix_array[3][0] = 0.0; ma->matrix_array[3][1] = 0.0; ma->matrix_array[3][2] = 0.0; ma->matrix_array[3][3] = 1;
 
-			Assert::AreEqual(m1, ma);
+			Assert::IsTrue(m1->compare(ma));
 		}
 
 		TEST_METHOD(Get_rotation_matrix_y)
@@ -135,7 +134,7 @@ namespace UnitTest
 			ma->matrix_array[2][0] = -sin(a); ma->matrix_array[2][1] = 0.0; ma->matrix_array[2][2] = cos(a); ma->matrix_array[2][3] = 0.0;
 			ma->matrix_array[3][0] = 0.0; ma->matrix_array[3][1] = 0.0; ma->matrix_array[3][2] = 0.0; ma->matrix_array[3][3] = 1.0;
 
-			Assert::AreEqual(m1, ma);
+			Assert::IsTrue(m1->compare(ma));
 		}
 
 		TEST_METHOD(Get_rotation_matrix_z)
@@ -153,7 +152,7 @@ namespace UnitTest
 			ma->matrix_array[2][0] = 0.0; ma->matrix_array[2][1] = 0.0; ma->matrix_array[2][2] = 1.0; ma->matrix_array[2][3] = 0.0;
 			ma->matrix_array[3][0] = 0.0; ma->matrix_array[3][1] = 0.0; ma->matrix_array[3][2] = 0.0; ma->matrix_array[3][3] = 1.0;
 
-			Assert::AreEqual(m1, ma);
+			Assert::IsTrue(m1->compare(ma));
 		}
 
 		TEST_METHOD(Multiply)
@@ -168,7 +167,7 @@ namespace UnitTest
 
 			m1 = m1->multiply(m2, m1);
 
-			Assert::AreEqual(ma, m1);
+			Assert::IsTrue(ma->compare(m1));
 		}
 
 

@@ -24,4 +24,5 @@ public:
 	Matrix* get_rotation_matrix_m4(Vector* axis);
 	Matrix* get_rotation_matrix_m5(Vector* axis);
 	Matrix* multiply(Matrix* l, Matrix* r);
+	bool compare(Matrix* matrix);
 };
